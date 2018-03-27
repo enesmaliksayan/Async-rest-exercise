@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+// Veri tabanı mLab.com üzerinde(yani cloud'da) kurulu.
 mongoose.connect('mongodb://odev:odev@ds123799.mlab.com:23799/odev1').then(
     () => {
         console.log('connected');
@@ -13,7 +14,7 @@ const DersSchema = mongoose.Schema({
     dersAdi: { type: String, required: true },
     dersKodu: { type: String, required: true },
     dersIcerigi: { type: String, required: true },
-    index: { type: Number, required: true, default: 0 }
+    index: { type: Number, required: true, unique:true, default: 0 }
 });
 
 const ders = module.exports = mongoose.model('Dersler', DersSchema);
