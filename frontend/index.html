@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ağ programlama ödev 1 - Enes Malik Sayan</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+    <script src="./js/jquery.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+
+    <script src="./js/script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row" style="margin-bottom:50px;">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                <table class="table table-striped" id="tablo">
+                    <thead>
+                        <tr>
+                            <th scope="col">Ders Programı</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">Sıra Numarası</th>
+                            <th scope="col">Ders kodu</th>
+                            <th scope="col">Ders Adı</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-12" style="display:none" id="editDers">
+                <div class="row">
+                    <div class="col-lg-2 col-md-3 col-sm-3 col-3">
+                        <p style="width:100%;margin-top:15px">Dersin Kodu:</p>
+                        <p style="width:100%;margin-top:15px">Dersin Adı:</p>
+                        <p style="width:100%;margin-top:15px">Dersin İçeriği:</p>
+                    </div>
+                    <div class="col-lg-10 col-md-9 col-sm-9 col-9">
+                        <input type="text" class="form-control" name="dersinKodu" style="width:100%;margin-top:5px" id="dersinKoduInput" />
+                        <input type="text" class="form-control" name="dersinAdi" style="width:100%;margin-top:5px" id="dersinAdiInput" />
+                        <input type="text" class="form-control" name="dersinIcerigi" style="width:100%;margin-top:5px" id="dersinIcerigiInput" />
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:25px">
+                        <div class="offset-lg-6 offset-md-6 offset-sm-6 offset-xs-6 row">
+                            <div class="col">
+                                <button type="button" class="btn btn-secondary btn-sm" id="xmlGetir">XML Göster</button>
+                            </div>
+                            <div class="col">
+                                <button type="button" class="btn btn-secondary btn-sm" id="jsonGetir">JSON Göster</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-12" style="display:none" id="kodlanmisVeri">
+                <b>Kodlanmış Veri</b>
+                <br>
+                <textarea class="form-control" id="kodlanmisVeriTextArea" rows="6"></textarea>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
